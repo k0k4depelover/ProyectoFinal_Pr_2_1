@@ -44,3 +44,16 @@ function evaluarExamen() {
 
     alert(mensaje);
 }
+function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === 'alumno' && password === '2024') {
+        document.getElementById('login-form').style.display = 'none';
+        document.getElementById('exam').style.display = 'block';
+        return false; // Evitar recargar la página
+    } else {
+        document.getElementById('error-message').style.display = 'block';
+        return false;
+    }
+}
